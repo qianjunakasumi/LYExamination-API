@@ -4,7 +4,6 @@ import (
 	"net"
 
 	"git.qianjunakasumi.ren/lyexamination/api/lyexamination"
-	pb "git.qianjunakasumi.ren/lyexamination/api/protobuf"
 
 	"google.golang.org/grpc"
 )
@@ -17,7 +16,7 @@ func main() {
 	}
 
 	server := grpc.NewServer()
-	pb.RegisterLYExaminationServer(server, lyexamination.LYExamination{})
+	lyexamination.RegisterLYExaminationServer(server, lyexamination.LYExamination{})
 	if err := server.Serve(lis); err != nil {
 		panic(err)
 	}
