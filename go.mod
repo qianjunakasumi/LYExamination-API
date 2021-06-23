@@ -1,4 +1,4 @@
-module git.qianjunakasumi.ren/lyexamination/api
+module github.com/lyexamination/api
 
 go 1.16
 
