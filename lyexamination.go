@@ -1,4 +1,4 @@
-package lyexamination
+package main
 
 type LYExamination struct {
 	UnimplementedLYExaminationServer

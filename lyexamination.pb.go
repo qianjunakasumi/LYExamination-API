@@ -4,7 +4,7 @@
 // 	protoc        v3.17.1
 // source: lyexamination.proto
 
-package api
+package main
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
