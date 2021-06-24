@@ -45,10 +45,10 @@ func (l LYExamination) Login(_ context.Context, in *LoginReq) (*LoginRsp, error)
 		return nil, errors.New("不可企及的会话 ID")
 
 	case "mimacuowu":
-		return nil, errors.New("密码错误")
+		return nil, errors.New("错误的密码")
 
 	case "shangweizhuce":
-		return nil, errors.New("帐号不存在")
+		return nil, errors.New("错误的帐号")
 
 	default:
 		return nil, errors.New("未知错误。远程状态：" + rsp.Message)
