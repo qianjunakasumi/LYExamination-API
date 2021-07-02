@@ -23,11 +23,13 @@ func main() {
 	if err != nil {
 		log.Panic().Err(err)
 	}
-
-	log.Info().Msg("监听 :443 正常")
+	if lis == nil {
+		log.Panic().Msg("监听 :443 失败")
+	}
 
 	server := grpc.NewServer()
-	RegisterLYExaminationServer(server, LYExamination{})
+	RegisterLYExaminationServer(server, &LYExamination{})
+	log.Info().Msg("监听 :443 正常")
 	if err := server.Serve(lis); err != nil {
 		log.Panic().Err(err)
 	}
