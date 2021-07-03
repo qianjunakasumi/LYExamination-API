@@ -1,5 +1,7 @@
 FROM alpine:3.14.0
 
-COPY api /api
+COPY api /bin/lyexamination-api
 
-CMD /api
+RUN chmod 777 /bin/lyexamination-api
+
+CMD lyexamination-api
